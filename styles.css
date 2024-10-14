@@ -1,0 +1,94 @@
+/* Ensure the height of body and html takes full viewport height */
+body, html {
+  height: 100%;
+}
+
+/* Style for the centered content */
+.middle {
+  color: whitesmoke; /* Text color */
+  font-family: "Roboto", sans-serif; /* Updated font style */
+  font-size: 25px; /* Font size */
+  position: absolute; /* Absolute positioning to center the content */
+  top: 60%; /* Positioning the content at 60% from the top */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Translate to ensure exact centering */
+  text-align: center; /* Center align the text */
+}
+
+/* Clip the image into a circular shape with hover effect */
+.profile-image {
+  clip-path: circle(115px at center); /* Circle shape with 115px radius */
+  transition: transform 0.3s ease; /* Smooth animation for hover */
+}
+
+/* Enlarge profile image on hover */
+.profile-image:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Style for horizontal lines */
+hr {
+  margin: auto; /* Center the line */
+  width: 40%; /* Line width relative to container */
+}
+
+/* CTA button styling */
+.cta-button {
+  background-color: #ba55d3; /* Bright purple background */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Spacing around the button */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+  display: inline-block; /* Ensure buttons align properly */
+  margin: 10px; /* Add space between buttons */
+}
+
+/* Change background color on hover for CTA buttons */
+.cta-button:hover {
+  background-color: #8a2be2; /* Darker purple on hover */
+}
+
+/* Style for normal links */
+a:link {
+  color: white; /* Default link color */
+}
+
+/* Style for visited links */
+a:visited {
+  color: lightgrey; /* Color change after link has been visited */
+}
+
+/* Hover effect for links */
+a:hover {
+  color: #ba55d3; /* Bright Purple hover effect */
+}
+
+/* Style for body background */
+body {
+  margin: 0px; /* Remove default margins */
+  background-image: url("background.jpg"); /* Background image */
+  background-color: black; /* Fallback background color */
+  height: 100%; /* Full viewport height */
+  background-position: center; /* Center the background image */
+  background-size: cover; /* Ensure background covers entire area */
+  position: relative; /* Positioning relative to the viewport */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Fade-in animation on page load */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .middle {
+      font-size: 18px; /* Reduce text size for smaller screens */
+  }
+
+  h1 {
+      font-size: 30px; /* Adjust heading size */
+  }
+}
